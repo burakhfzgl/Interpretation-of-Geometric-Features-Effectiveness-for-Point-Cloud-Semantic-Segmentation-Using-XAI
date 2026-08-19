@@ -1,4 +1,4 @@
-# Point Cloud Semantic Segmentation
+# Interpretation of Geometric Features Effectiveness for Point Cloud Semantic Segmentation Using Explainable Artificial Intelligence
 
 ![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
 ![XGBoost](https://img.shields.io/badge/xgboost-latest-green.svg)
