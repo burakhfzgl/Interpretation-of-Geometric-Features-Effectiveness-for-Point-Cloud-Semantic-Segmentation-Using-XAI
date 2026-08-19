@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data files (often too large for Git)
+data/raw/*
+data/processed/*
+*.csv
+*.txt
+*.las
+*.laz
+*.pcd
+*.ply
+
+# Saved Models (Too large for GitHub)
+models/saved/*
+*.joblib
+
+# Auto-generated plots (Move to an assets/ folder if you want to commit them)
+/*.png
+
+# IDEs
+.vscode/
+.idea/
