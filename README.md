@@ -57,12 +57,10 @@ This project utilizes the **RMIT area dataset**. The original dataset provides `
    pip install -r requirements.txt
    ```
 
-3. **Data Preparation & Placement:**
-   - Download the raw `.las` files from the dataset link.
-   - Open them in CloudCompare, compute the geometric features with a 0.5m radius, and export as `.ply`.
-   - Place your exported CloudCompare data into the project:
-     - `data/processed/train.ply`
-     - `data/processed/test.ply`
+3. **Data Placement:**
+   For this study, the raw `.las` files were manually processed in CloudCompare (0.5m radius geometric feature extraction) and exported as `.ply`. To reproduce the results, place the resulting processed files into the project:
+   - `data/processed/train.ply`
+   - `data/processed/test.ply`
 
 ## Usage
 
