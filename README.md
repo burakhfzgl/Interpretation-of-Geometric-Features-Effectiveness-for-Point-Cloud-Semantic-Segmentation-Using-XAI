@@ -18,7 +18,7 @@ The goal of this project is to accurately classify urban point clouds into disti
 
 ## Dataset
 
-This project utilizes the **RMIT area dataset**. The raw `.ply` files were processed to extract localized geometric features (linearity, planarity, sphericity, verticality, etc.) at a 0.5m radius.
+This project utilizes the **RMIT area dataset**. The original dataset provides `.las` point cloud files. These raw `.las` files were imported into CloudCompare, where a local neighborhood radius of 0.5m was defined to compute the geometric features (linearity, planarity, sphericity, verticality, etc.). The processed point clouds were then exported as `.ply` files for model training and testing.
 
 *Note: Due to GitHub file size limits, the dataset and trained models are not included in this repository.*
 - **Download Link:** [FOR-instance Dataset (Zenodo)](https://zenodo.org/records/8287792?preview_file=FORinstance_dataset.zip)
@@ -28,8 +28,8 @@ This project utilizes the **RMIT area dataset**. The raw `.ply` files were proce
 
 ```text
 ├── data/
-│   ├── raw/                 # Put your raw PLY files here
-│   └── processed/           # Put train.ply and test.ply here
+│   ├── raw/                 # Original dataset .las files
+│   └── processed/           # Exported CloudCompare train.ply and test.ply
 ├── models/
 │   └── saved/               # Trained models (.joblib) are saved here
 ├── src/
@@ -57,10 +57,12 @@ This project utilizes the **RMIT area dataset**. The raw `.ply` files were proce
    pip install -r requirements.txt
    ```
 
-3. **Data Placement:**
-   Place your exported CloudCompare data into the project:
-   - `data/processed/train.ply`
-   - `data/processed/test.ply`
+3. **Data Preparation & Placement:**
+   - Download the raw `.las` files from the dataset link.
+   - Open them in CloudCompare, compute the geometric features with a 0.5m radius, and export as `.ply`.
+   - Place your exported CloudCompare data into the project:
+     - `data/processed/train.ply`
+     - `data/processed/test.ply`
 
 ## Usage
 
